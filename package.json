@@ -11,7 +11,7 @@
     "test": "npm run tslint && npm run jest",
     "clean": "zem clean",
     "exec": "zem exec",
-    "deploy": "now -n jm-latex-zeplin-extension --scope joshmartin dist && now ln --scope joshmartin jm-latex-zeplin-extension.joshmartin.now.sh https://zeplin.joshmartin.rocks",
+    "deploy": "now -n jm-latex-zeplin-extension --scope joshmartin dist && now ln --scope joshmartin jm-latex-zeplin-extension.joshmartin.now.sh https://zeplin-latex.joshmartin.rocks",
     "jest": "NODE_ENV=jest ./node_modules/.bin/jest --passWithNoTests",
     "tslint": "tslint 'src/**/*.ts?(x)' --project ."
   },

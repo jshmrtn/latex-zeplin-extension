@@ -1,0 +1,47 @@
+{
+  "name": "latex",
+  "version": "0.0.0",
+  "description": "Zeplin Latex Generator Plugin",
+  "main": "src/index.ts",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "start": "zem start",
+    "build": "npm run clean && zem build",
+    "test": "npm run tslint && npm run jest",
+    "clean": "zem clean",
+    "exec": "zem exec",
+    "deploy": "now -n jm-latex-zeplin-extension --scope joshmartin dist && now ln --scope joshmartin jm-latex-zeplin-extension.joshmartin.now.sh https://zeplin.joshmartin.rocks",
+    "jest": "NODE_ENV=jest ./node_modules/.bin/jest --passWithNoTests",
+    "tslint": "tslint 'src/**/*.ts?(x)' --project ."
+  },
+  "zeplin": {
+    "displayName": "Latex",
+    "projectTypes": [
+      "web"
+    ],
+    "options": [
+      {
+        "name": "Name Prefix",
+        "type": "text",
+        "id": "namePrefix",
+        "default": ""
+      }
+    ]
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.136",
+    "zem": "^0.3.5"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.13",
+    "@types/nunjucks": "^3.1.1",
+    "jest": "^24.8.0",
+    "jest-multiline-matchers": "^0.2.1",
+    "lodash": "^4.17.14",
+    "ts-jest": "^23.10.5",
+    "ts-loader": "^3.0",
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.5"
+  }
+}
